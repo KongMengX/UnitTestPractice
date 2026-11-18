@@ -48,7 +48,5 @@ TEST(PasswordTest, mixed_case_letters)
 {
     Password my_password;
     bool actual = my_password.has_mixed_case("abCD");
-    ASSERT_EQ(false, actual);
+    ASSERT_EQ(true, actual);
 }
-//bru the fkn letters wont work for wie or left bracket </3
-//test cases for: empt./no letters, same # characters for 2+ letters(AAABBB1234),spaces, etc idk

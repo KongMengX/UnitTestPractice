@@ -11,6 +11,7 @@ using std::string;
 */
 int Password::count_leading_characters(string phrase){
   int repetition = 1;
+  if (phrase.length() == 0) return 0;
   int index = 0;
   while( index < phrase.length()-1 && phrase[index] == phrase[index+1] ){
     repetition++;
@@ -32,7 +33,7 @@ bool Password::has_mixed_case(string pass){
         if (pass.at(i) <= 90 && pass.at(i) >= 65) { hasCaps = true;}  //comparing index with ascii of Cap letters
         else if (pass.at(i) <= 122 && pass.at(i) >= 97) { hasLower = true;} //compare index with ascii of lower letters
     }
-    if (hasCaps == hasLower) return true
+    if (hasCaps == hasLower) return true;
   }
   return false;
 }
